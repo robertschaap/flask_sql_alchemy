@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Text, Date
 from database import Base
 
 class User(Base):
@@ -13,3 +13,10 @@ class User(Base):
 
   def __repr__(self):
     return '<User %r>' % (self.name)
+
+class Something(Base):
+  __tablename__ = 'somethings'
+  id = Column(Integer, primary_key=True)
+  title = Column(Text)
+  date1 = Column(Date)
+  date2 = Column(Date)
