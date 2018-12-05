@@ -20,3 +20,6 @@ class Something(Base):
   title = Column(Text)
   date1 = Column(Date)
   date2 = Column(Date)
+
+  def __repr__(self):
+    return '<Something (%r %r)>' % (self.title, self.date2)
